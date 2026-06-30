@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask candidates where they stand on Ukraine</title>
+<meta name="description" content="A simple tool to help U.S. voters ask 2026 House and Senate candidates where they stand on Ukraine. No signup, no tracking, no candidate list.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <h1 class="site-name">Make Ukraine part of the campaign conversation</h1>
+  <p class="intro">If candidates hear from enough of us, they'll understand that voters want strong support for Ukraine.</p>
+  <p class="intro-why"><a href="why-this-works/">Why this works</a></p>
+</header>
+
+<main>
+
+  <section class="card" aria-label="Build your message">
+    <div class="card-header-row">
+      <h2>Build your message</h2>
+      <button class="btn btn-sm secondary" id="btn-reroll" type="button"><span class="reroll-icon">⟳</span> New</button>
+    </div>
+
+    <div class="restore-bar" id="restore-bar" hidden>
+      Your edits were replaced when you tried a new version.
+      <button id="btn-restore" type="button">Restore my edits</button>
+    </div>
+
+    <div id="message-display" class="message-display" contenteditable="true" spellcheck="false" aria-label="Your message" aria-multiline="true" role="textbox"></div>
+
+    <button class="btn" id="btn-copy-message" type="button">Copy message</button>
+  </section>
+
+  <section class="card action-steps" aria-label="What to do next">
+    <h2>What to do next</h2>
+    <ol class="steps">
+      <li>
+        <strong>Find your House district if you do not know it <a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener">(find your district)</a>.</strong>
+      </li>
+      <li>
+        <strong>Search for your 2026 candidates.</strong>
+        <p>Try "2026 House candidates [your district]" or "2026 Senate candidates [your state]" in a search engine.</p>
+      </li>
+      <li>
+        <strong>Open each candidate's official campaign website.</strong>
+      </li>
+      <li>
+        <strong>Find the contact page.</strong>
+        <p>Look for "Contact," "Email," "Get in touch," or "Contact the campaign."</p>
+      </li>
+      <li>
+        <strong>Paste your message and send.</strong>
+        <p>Add one sentence if you can. Send it to one candidate or all of them.</p>
+      </li>
+    </ol>
+    <p class="step-note">Use campaign contact pages, not official government office pages, when asking campaign questions.</p>
+  </section>
+
+  <section class="card card-cta" aria-label="After you send it">
+    <h2>After you send it</h2>
+    <p>Share this page where people are already talking about Ukraine. This includes YouTube comments, Reddit, Facebook, group chats, or others who care about Ukraine.</p>
+    <button class="btn" id="btn-copy-share" type="button">Copy a share comment</button>
+  </section>
+
+  <section class="card privacy-note">
+    <strong>No signup. No tracking. No database. No candidate list. No endorsements.</strong> This page does not send anything for you. You copy, edit, and send the message yourself.
+  </section>
+
+  <div class="page-footer">
+    <p style="text-align:center;"><a href="about/">About this site</a> &nbsp;|&nbsp; Questions, corrections, or feedback? <a href="mailto:stillwatchingukraine@proton.me">Email us</a>.</p>
+  </div>
+
+</main>
+
+<footer class="site"></footer>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
