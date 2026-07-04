@@ -95,9 +95,15 @@ h1.site-name {
   display: inline-flex;
   align-items: center;
   gap: 7px;
+  opacity: 1;
+  transition: opacity 0.35s ease;
 }
 .btn.btn-sm[hidden] {
   display: none;
+}
+.btn.btn-sm.is-hiding {
+  opacity: 0;
+  pointer-events: none;
 }
 .reroll-icon {
   font-size: 1.2rem;

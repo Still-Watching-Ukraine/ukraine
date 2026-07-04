@@ -107,8 +107,11 @@
     setMessageHtml(buildMessage());
 
     els.messageDisplay.addEventListener("input", () => {
-      isDirty = true;
-      els.reroll.hidden = true;
+      if (!isDirty) {
+        isDirty = true;
+        els.reroll.classList.add("is-hiding");
+        els.reroll.addEventListener("transitionend", () => { els.reroll.hidden = true; }, { once: true });
+      }
     });
 
     els.reroll.addEventListener("click", () => {
