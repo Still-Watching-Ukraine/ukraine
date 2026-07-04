@@ -96,6 +96,9 @@ h1.site-name {
   align-items: center;
   gap: 7px;
 }
+.btn.btn-sm[hidden] {
+  display: none;
+}
 .reroll-icon {
   font-size: 1.2rem;
   color: #fff;
