@@ -10,13 +10,10 @@
     messageDisplay: $("message-display"),
     copyMessage: $("btn-copy-message"),
     reroll: $("btn-reroll"),
-    restoreBar: $("restore-bar"),
-    restoreBtn: $("btn-restore"),
     copyShare: $("btn-copy-share"),
   };
 
   let isDirty = false;
-  let stashedDraft = null;
 
   // Shuffle deck — cycles through all templates before repeating any
   let deck = [];
@@ -109,21 +106,15 @@
   function init() {
     setMessageHtml(buildMessage());
 
-    els.messageDisplay.addEventListener("input", () => { isDirty = true; });
+    els.messageDisplay.addEventListener("input", () => {
+      isDirty = true;
+      els.reroll.hidden = true;
+    });
 
     els.reroll.addEventListener("click", () => {
-      if (isDirty && getDisplayText().trim()) {
-        stashedDraft = getDisplayText();
-        els.restoreBar.hidden = false;
-      }
       currentIndex = nextIndex();
       setMessageHtml(buildMessage());
       isDirty = false;
-    });
-
-    els.restoreBtn.addEventListener("click", () => {
-      if (stashedDraft) { setMessageHtml(stashedDraft); isDirty = true; }
-      els.restoreBar.hidden = true;
     });
 
     els.copyMessage.addEventListener("click", () => {
